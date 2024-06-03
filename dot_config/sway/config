@@ -35,7 +35,7 @@ set $mon2 'Dell Inc. DELL U2412M 0FFXD3CF1LDS'
 set $mon3 'Dell Inc. DELL U2415 XKV0P01G1HKU'
 
 output $mon1 resolution 2560x2880@59.982Hz position 0 0 
-output $mon2 resolution 1920x1200@59.950Hz position 2560 480
+output $mon2 resolution 1920x1200@59.950Hz position 2560 480 bg #00000
 output $mon3 resolution 1920x1200@59.950Hz position 2560 1680
 
 
