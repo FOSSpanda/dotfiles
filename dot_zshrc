@@ -18,7 +18,7 @@ export EDITOR=nano
 export LS_COLORS="$(vivid generate catppuccin-frappe)"
 
 # path!
-path=("${XDG_DATA_HOME:-${HOME}/.local/bin)
+path=("${XDG_HOME:-${HOME}/.local/bin")
 
 # add powerlevel 10k
 zinit ice depth=1; zinit light romkatv/powerlevel10k
