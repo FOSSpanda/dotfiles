@@ -12,7 +12,7 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # set the editor
-export EDITOR=micro
+export EDITOR=nano
 
 # add powerlevel 10k
 zinit ice depth=1; zinit light romkatv/powerlevel10k
