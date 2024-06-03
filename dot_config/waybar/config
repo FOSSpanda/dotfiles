@@ -11,8 +11,8 @@
   },
 
   "sway/workspaces": {
-	"format": "{title}",
-},
+	"format": "{name}",
+  },
 
 "idle_inhibitor":{
   "format": "<span font='12'>{icon} </span>",
