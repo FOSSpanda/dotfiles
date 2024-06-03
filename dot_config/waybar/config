@@ -12,7 +12,6 @@
 
   "sway/workspaces": {
 	"format": "{title}",
-       }
 },
 
 "idle_inhibitor":{
