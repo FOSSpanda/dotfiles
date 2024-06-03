@@ -36,7 +36,7 @@ set $mon3 'Dell Inc. DELL U2415 XKV0P01G1HKU'
 
 output $mon1 resolution 2560x2880@59.982Hz position 0 0 
 output $mon2 resolution 1920x1200@59.950Hz position 2560 480
-output $mon3 resolution 1920x1200@59.950Hz positon 2560 1680
+output $mon3 resolution 1920x1200@59.950Hz position 2560 1680
 
 
 ### Idle configuration
