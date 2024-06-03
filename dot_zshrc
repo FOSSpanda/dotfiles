@@ -14,6 +14,9 @@ source "${ZINIT_HOME}/zinit.zsh"
 # set the editor
 export EDITOR=nano
 
+# catppuccin for LS_COLOR!
+export LS_COLORS="$(vivid generate catppuccin-frappe)"
+
 # add powerlevel 10k
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
@@ -21,9 +24,13 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
+zinit light Aloxaf/fzf-tab
 
 # auto load completions
 autoload -Uz compinit && compinit
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #keybinds
 bindkey -e
@@ -50,8 +57,9 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+alias bat=cat
+alias less=most
+alias cd..="cd .."
 
 # Shell integrations
 eval "$(fzf --zsh)"
