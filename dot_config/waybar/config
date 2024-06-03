@@ -11,7 +11,7 @@
   },
 
   "sway/workspaces": {
-	"format": "{text}",
+	"format": "{title}",
        }
 },
 
