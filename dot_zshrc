@@ -18,7 +18,7 @@ export EDITOR=nano
 export LS_COLORS="$(vivid generate catppuccin-frappe)"
 
 # path!
-path=('~/.local/bin" $path')
+path=('~/.local/bin $path')
 
 export $PATH
 
