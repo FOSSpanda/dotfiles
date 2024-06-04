@@ -1,4 +1,3 @@
-
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -15,6 +14,9 @@ set $term wezterm
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | wmenu | xargs swaymsg exec --
 set $menu fuzzel
+
+### Execute things
+exec autotiling --limit=2
 
 
 ### Output configuration
