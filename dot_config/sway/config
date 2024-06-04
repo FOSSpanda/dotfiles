@@ -35,6 +35,9 @@ output $mon1 resolution 2560x2880@59.982Hz position 0 0
 output $mon2 resolution 1920x1200@59.950Hz position 2560 480 bg #000000 solid_color 
 output $mon3 resolution 1920x1200@59.950Hz position 2560 1680
 
+gaps inner 2
+default_border none
+default_floating_border pixel 2
 
 ### Idle configuration
 #
