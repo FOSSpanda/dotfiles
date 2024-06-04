@@ -38,8 +38,11 @@ output $mon2 resolution 1920x1200@59.950Hz position 2560 480 bg #000000 solid_co
 output $mon3 resolution 1920x1200@59.950Hz position 2560 1680
 
 gaps inner 2
+gaps outer 2
+smart_gaps on
 default_border none
 default_floating_border pixel 2
+font pango:monospace 12
 
 ### Idle configuration
 #
