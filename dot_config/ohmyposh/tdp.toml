@@ -13,7 +13,6 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     style = 'diamond'
     foreground = 'p:black'
     background = 'p:yellow'
-    leading_diamond = ''
     trailing_diamond = ''
     template = ' {{ if .SSHSession }} {{ end }}{{ .UserName }} '
 
