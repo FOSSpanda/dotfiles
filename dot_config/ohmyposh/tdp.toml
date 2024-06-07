@@ -26,7 +26,11 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   [[blocks.segments]]
     type = 'text'
     style = 'plain'
-    backgroun = ' transparent'
+    background = ' transparent'
     foreground = 'magenta'
-    template = '🐼>'
+    template = '🐼〉'
 
+[transient_prompt]
+  foreground = 'magenta'
+  background = 'transparent'
+  template = '〉' 
