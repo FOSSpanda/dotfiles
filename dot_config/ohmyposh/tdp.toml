@@ -57,7 +57,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     background = 'p:blue'
     background_templates = ['{{ if gt .Code 0 }}p:red{{ end }}']
     leading_diamond = '<transparent,background></>'
-    trailing_diamond = ''
+    trailing_diamond = ''
     template = ' {{ if gt .Code 0 }}{{ else }}{{ end }} '
 
     [blocks.segments.properties]
