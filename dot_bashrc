@@ -22,7 +22,7 @@ export LS_COLORS="$(vivid generate catppuccin-mocha)"
 
 test -s ~/.bash_aliases && . ~/.bash_aliases || true
 
-export EDITOR=nano
+export EDITOR=helix
 
 hyfetch
 
