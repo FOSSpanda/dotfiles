@@ -13,3 +13,6 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     style = 'plain'
     background = 'transparent'
     foreground = 'blue'
+
+    [blocks.segements.properties]
+      style = 'full'
