@@ -19,7 +19,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 
 [[blocks]]
   type = 'prompt'
-  aligment = 'left'
+  alignment = 'left'
   newline = true
 
   [[blocks.segments]]
