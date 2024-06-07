@@ -16,3 +16,10 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 
     [blocks.segments.properties]
       style = 'full'
+
+  [[blocks.segments]]
+    type = 'text'
+    style = 'plain'
+    backgroun = ' transparent'
+    foreground = 'magenta'
+    template = '🐼>'
