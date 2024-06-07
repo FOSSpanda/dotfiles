@@ -56,11 +56,11 @@ button:hover {
 }
 
 #workspaces button.focused {
-    background-color: #777777;
+    color: #777777;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: #999999;
 }
 
 #mode {
