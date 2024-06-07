@@ -14,5 +14,5 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     background = 'transparent'
     foreground = 'blue'
 
-    [blocks.segements.properties]
+    [blocks.segments.properties]
       style = 'full'
