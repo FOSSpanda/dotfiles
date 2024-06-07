@@ -28,7 +28,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     style = 'plain'
     background = ' transparent'
     foreground = 'magenta'
-    template = '🐼〉'
+    template = '〉'
 
 [transient_prompt]
   foreground = 'magenta'
