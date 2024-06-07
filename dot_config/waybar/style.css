@@ -190,48 +190,48 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    background-color: #999999;
+    color: #FFFFFF;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    background-color: #999999;
+    color: #FFFFFF;
 }
 
 #wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
+    background-color: #999999;
+    color: #FFFFFF;
 }
 
 #wireplumber.muted {
-    background-color: #f53c3c;
+    background-color: #999999;
 }
 
 #custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
+    background-color: #999999;
+    color: #FFFFFFS;
     min-width: 100px;
 }
 
 #custom-media.custom-spotify {
-    background-color: #66cc99;
+    background-color: #999999;
 }
 
 #custom-media.custom-vlc {
-    background-color: #ffa000;
+    background-color: #999999;
 }
 
 #temperature {
-    background-color: #f0932b;
+    background-color: #999999;
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+    background-color: #FF0000;
 }
 
 #tray {
-    background-color: #2980b9;
+    background-color: #999999;
 }
 
 #tray > .passive {
@@ -240,16 +240,16 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: #990000;
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    background-color: #999999;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+    background-color: #999999;
+    color: #FFFFFF;
 }
 
 #mpd {
@@ -278,8 +278,8 @@ label:focus {
 }
 
 #keyboard-state {
-    background: #97e1ad;
-    color: #000000;
+    background: #99999;
+    color: #FFFFFF;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;
