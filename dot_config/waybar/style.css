@@ -1,4 +1,4 @@
-n* {
+nn* {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: monospace, FontAwesome;
     font-size: 12px;
@@ -278,7 +278,7 @@ label:focus {
 }
 
 #keyboard-state {
-    background: #99999;
+    background: #999999;
     color: #FFFFFF;
     padding: 0 0px;
     margin: 0 5px;
