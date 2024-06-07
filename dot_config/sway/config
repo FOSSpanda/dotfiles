@@ -43,11 +43,11 @@ font pango:monospace 12
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock -f -c 000000'
+
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -143,11 +143,11 @@ input "9456:8266:Metadot_-_Das_Keyboard_Das_Keyboard_4" {
 
     workspace 1 output $mon1
     workspace 2 output $mon1
-    workspace 3 output $mon1
-    workspace 4 output $mon1
+    workspace 3 output $mon2
+    workspace 4 output $mon2
     workspace 5 output $mon2
-    workspace 6 output $mon2
-    workspace 7 output $mon2
+    workspace 6 output $mon3
+    workspace 7 output $mon3
     workspace 8 output $mon3
     workspace 9 output $mon3
     workspace 10 output $mon3
