@@ -100,12 +100,6 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
       fetch_version = false
       fetch_virtual_env = false
 
-  [[blocks.segments]]
-    type = 'shell'
-    style = 'plain'
-    foreground = 'p:white'
-    background = 'transparent'
-    template = 'in <p:blue><b>{{ .Name }}</b></> '
 
   [[blocks.segments]]
     type = 'time'
