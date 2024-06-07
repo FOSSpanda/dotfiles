@@ -1,4 +1,4 @@
-* {
+n* {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: monospace, FontAwesome;
     font-size: 12px;
@@ -271,7 +271,7 @@ label:focus {
 
 #language {
     background: #999999;
-    color: #;
+    color: #FFFFFF;
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
