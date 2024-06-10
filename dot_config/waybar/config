@@ -176,7 +176,7 @@
 	"custom/audio_idle_inhibitor": {
 		"format": "{icon}",
 		"exec": "sway-audio-idle-inhibit --dry"
-        exec-if": "which sway-audio-idle-inhibit",-print-both-waybar",
+        "exec-if": "which sway-audio-idle-inhibit",-print-both-waybar",
 		"return-type": "json",
 		"format-icons": {
 			"output": "",
