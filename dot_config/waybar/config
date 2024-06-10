@@ -172,7 +172,7 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    }
+    },
 	"custom/audio_idle_inhibitor": {
 		"format": "{icon}",
 		"exec": "sway-audio-idle-inhibit --dry-print-both-waybar",
@@ -184,5 +184,5 @@
 			"output-input": "  ",
 			"none": ""
 		}
-	},
+	}
 }
