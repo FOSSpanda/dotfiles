@@ -26,11 +26,9 @@ window#waybar.solo {
 */
 
 window#waybar.termite {
-    background-color: #3F3F3F;
 }
 
 window#waybar.chromium {
-    background-color: #000000;
     border: none;
 }
 
@@ -50,7 +48,6 @@ button:hover {
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: #a37800;
 }
 
 #workspaces button {
@@ -114,17 +111,12 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
 }
 
 @keyframes blink {
@@ -136,7 +128,6 @@ button:hover {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
     color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -150,17 +141,14 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    background-color: #f53c3c;
     color: #ffffff;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #2980b9;
     color: #ffffff;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
     color: #000000;
 }
 
@@ -169,65 +157,50 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
 }
 
 #memory {
-    background-color: #9b59b6;
 }
 
 #disk {
-    background-color: #964B00;
 }
 
 #backlight {
-    background-color: #90b1b1;
 }
 
 #network {
-    background-color: #2980b9;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
     color: #000000;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
     color: #2a5c45;
 }
 
 #wireplumber {
-    background-color: #fff0f5;
     color: #000000;
 }
 
 #wireplumber.muted {
-    background-color: #f53c3c;
 }
 
 #custom-media {
-    background-color: #66cc99;
     color: #2a5c45;
     min-width: 100px;
 }
 
 #custom-media.custom-spotify {
-    background-color: #66cc99;
 }
 
 #custom-media.custom-vlc {
-    background-color: #ffa000;
 }
 
 #temperature {
-    background-color: #f0932b;
 }
 
 #temperature.critical {
@@ -235,7 +208,6 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
 }
 
 #tray > .passive {
@@ -257,24 +229,19 @@ label:focus {
 }
 
 #mpd {
-    background-color: #66cc99;
     color: #2a5c45;
 }
 
 #mpd.disconnected {
-    background-color: #f53c3c;
 }
 
 #mpd.stopped {
-    background-color: #90b1b1;
 }
 
 #mpd.paused {
-    background-color: #51a37a;
 }
 
 #language {
-    background: #00b093;
     color: #740864;
     padding: 0 5px;
     margin: 0 5px;
@@ -282,7 +249,6 @@ label:focus {
 }
 
 #keyboard-state {
-    background: #97e1ad;
     color: #000000;
     padding: 0 0px;
     margin: 0 5px;
