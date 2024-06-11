@@ -17,6 +17,7 @@ set $term wezterm
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | wmenu | xargs swaymsg exec --
 set $menu fuzzel
+set $manager thunar
 
 ### Execute things
 exec autotiling --limit=2
@@ -106,6 +107,9 @@ input "9456:8266:Metadot_-_Das_Keyboard_Das_Keyboard_4" {
     # Start your launcher
     bindsym $mod+d exec $menu
 
+    # Start file manager
+    bindsym $mod+m exec $manager
+    
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
