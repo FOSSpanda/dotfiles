@@ -175,7 +175,6 @@ label:focus {
 }
 
 #pulseaudio {
-    color: #000000;
 }
 
 #pulseaudio.muted {
@@ -220,11 +219,9 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
     color: #2d3436;
 }
 
@@ -242,14 +239,12 @@ label:focus {
 }
 
 #language {
-    color: #740864;
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
 }
 
 #keyboard-state {
-    color: #000000;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;
