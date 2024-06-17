@@ -53,7 +53,7 @@ elif [ -f "/etc/pop-os/os-release" ]; then
     thunar-archive-plugin thunar-volman thunar-gtkhash unzip \
     cmake meson xdg-user-dirs jq grim slurp \
     steam-installer steam-devices libfuse2 \
-    wl-clipboard python3-pip telegram-desktop
+    wl-clipboard python3-pip
 
   wget "https://discord.com/api/download?platform=linux&format=deb" -O ~/Downloads/discord.deb
   sudo apt install ./Downloads/discord.deb
@@ -75,12 +75,9 @@ read -p "Press key to continue.. " -n1 -s
 
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-if [ -f "/etc/debian-version"]; then
-  flatpak install org.telegram.desktop
-fi
-
 if [ -f "/etc/debian-version"] || [ -f "/etc/pop-os/os-release"]; then
   flatpak install com.borgbase.Vorta
+  flatpak install org.telegram.desktop
 fi
 
 echo "rust"
