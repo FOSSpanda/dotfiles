@@ -30,7 +30,7 @@ elif [ -f "/etc/debian-version"]; then
     steam-installer steam-devices autotiling libfuse2 \
     wl-clipboard
 
-  wget https://discord.com/api/download?platform=linux&format=deb -O ~/Downloads/discord.deb
+  wget "https://discord.com/api/download?platform=linux&format=deb" -O ~/Downloads/discord.deb
 
   sudo apt install ./Downloads/discord.deb
 
