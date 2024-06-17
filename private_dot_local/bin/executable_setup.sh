@@ -34,14 +34,40 @@ elif [ -f "/etc/debian-version"]; then
 
   sudo apt install ./Downloads/discord.deb
 
+
 echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/3/Debian_12/ /' | sudo tee /etc/apt/sources.list.d/shells:fish:release:3.list
 curl -fsSL https://download.opensuse.org/repositories/shells:fish:release:3/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_fish_release_3.gpg > /dev/null
 sudo apt update
 sudo apt install fish
 
 #add packages for popos
+elif [ -f "/etc/pop-os/os-release" ]; then
+  sudo apt update
+  sudo apt install \
+    stow sway swayidle swaylock mako-notifier bat most less micro \
+    git fzf thunar curl flatpak pkg-config \
+    xdg-desktop-portal-wlr xdg-desktop-portal-gtk fonts-font-awesome \
+    xwayland firefox fonts-noto fonts-noto-color-emoji \
+    waybar breeze-icon-theme nala libfontconfig-dev \
+    pavucontrol cmake gvfs polkit-kde-agent-1 \
+    thunar-archive-plugin thunar-volman thunar-gtkhash unzip \
+    cmake meson xdg-user-dirs jq grim slurp \
+    steam-installer steam-devices libfuse2 \
+    wl-clipboard python3-pip telegram-desktop
+
+  wget "https://discord.com/api/download?platform=linux&format=deb" -O ~/Downloads/discord.deb
+  sudo apt install ./Downloads/discord.deb
+
+  pip install -U hyfetch
+
+  echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/3/Debian_12/ /' | sudo tee /etc/apt/sources.list.d/shells:fish:release:3.list
+  curl -fsSL https://download.opensuse.org/repositories/shells:fish:release:3/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_fish_release_3.gpg > /dev/null
+  sudo apt update
+  sudo apt install fish
+
+
 else
-  exit "Only setyup for debian and arch!" 1;
+  exit "Only setup for debian, pop, and arch!" 1;
 fi
 
 echo "flatpak time"
