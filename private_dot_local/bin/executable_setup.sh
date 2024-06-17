@@ -19,7 +19,7 @@ elif [ -f "/etc/debian-version"]; then
   sudo apt update
 
   sudo apt install \
-    stow sway swayidle swaylock mako-notifier bat most less micro \ 
+    stow sway swayidle swaylock mako-notifier bat most less micro \
     git fuzzel fzf thunar curl hyfetch flatpak pkg-config \
     xdg-desktop-portal-wlr xdg-desktop-portal-gtk fonts-font-awesome  \
     xwayland firefox fonts-noto fonts-noto-color-emoji \
@@ -57,5 +57,11 @@ cargo install alacritty
 cargo install eza
 cargo install zoxide
 cargo install vivid
+
+
+echo "oh my posh"
+read -p "Press key to continue.. " -n1 -s
+
+curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin
 
 exit
