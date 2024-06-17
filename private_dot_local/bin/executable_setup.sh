@@ -33,6 +33,12 @@ elif [ -f "/etc/debian-version"]; then
   wget https://discord.com/api/download?platform=linux&format=deb -O ~/Downloads/discord.deb
 
   sudo apt install ./Downloads/discord.deb
+
+echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/3/Debian_12/ /' | sudo tee /etc/apt/sources.list.d/shells:fish:release:3.list
+curl -fsSL https://download.opensuse.org/repositories/shells:fish:release:3/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_fish_release_3.gpg > /dev/null
+sudo apt update
+sudo apt install fish
+
 #add packages for popos
 else
   exit "Only setyup for debian and arch!" 1;
