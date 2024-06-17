@@ -79,6 +79,10 @@ if [ -f "/etc/debian-version"]; then
   flatpak install org.telegram.desktop
 fi
 
+if [ -f "/etc/debian-version"] || [ -f "/etc/pop-os/os-release"]; then
+  flatpak install com.borgbase.Vorta
+fi
+
 echo "rust"
 read -p "Press key to continue.. " -n1 -s
 
