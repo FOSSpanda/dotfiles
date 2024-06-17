@@ -33,7 +33,7 @@ elif [ -f "/etc/debian-version"]; then
   wget https://discord.com/api/download?platform=linux&format=deb -O ~/Downloads/discord.deb
 
   sudo apt install ./Downloads/discord.deb
-
+#add packages for popos
 else
   exit "Only setyup for debian and arch!" 1;
 fi
