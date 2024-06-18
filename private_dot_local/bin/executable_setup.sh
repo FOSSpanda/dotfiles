@@ -13,7 +13,7 @@ if [ -f "/etc/arch-release" ]; then
     xdg-user-dirs jq grim slurp sway-contrib wl-clipboard \
     discord telegram-desktop
 
-elif [ -f "/etc/debian-version"]; then
+elif [ -f "/etc/debian_version" ]; then
   sudo dpkg --add-architecture i386
 
   sudo apt update
@@ -75,7 +75,7 @@ read -p "Press key to continue.. " -n1 -s
 
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-if [ -f "/etc/debian-version"] || [ -f "/etc/pop-os/os-release"]; then
+if [ -f "/etc/debian-version" ] || [ -f "/etc/pop-os/os-release" ]; then
   flatpak install com.borgbase.Vorta
   flatpak install org.telegram.desktop
 fi
