@@ -16,7 +16,7 @@ set $term wezterm
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | wmenu | xargs swaymsg exec --
 set $menu fuzzel
-set $manager thunar
+set $manager dolphin
 
 ### Execute things
 exec autotiling --limit=2
@@ -42,7 +42,7 @@ output $mon3 resolution 1920x1200@59.950Hz position 2560 1680
 
 gaps inner 2
 gaps outer 2
-#smart_gaps on
+smart_gaps on
 default_border none
 default_floating_border pixel 2
 font pango:monospace 12
@@ -55,7 +55,7 @@ font pango:monospace 12
     exec gsettings set org.gnome.desktop.interface icon-theme 'Arc'
     exec gsettings set org.gnome.desktop.interface document-font-name 'Noto Sans Medium 10.5'
     exec gsettings set org.gnome.desktop.interface font-name 'Noto Sans Medium 10.5'
-    exec gsettings set org.gnome.desktop.interface monospace-font-name 'Intel One Mono10.5'
+    exec gsettings set org.gnome.desktop.interface monospace-font-name 'Comic Code Ligatures 12'
     exec gsettings set org.gnome.desktop.interface enable-animations true
 
 ### Idle configuration
@@ -93,7 +93,14 @@ input "9456:8266:Metadot_-_Das_Keyboard_Das_Keyboard_4" {
     xkb_numlock enabled
     xkb_options "compose:rctl,compose:caps"
 }
+input "6134:2085:Unicomp_Inc_Ruffian6_0_Kbrd_PC_5250__v3_50" {
+    xkb_layout gb
+    xkb_model pc105
+    xkb_variant extd
+    xkb_numlock enabled
+    xkb_options "compose:rctl,compose:caps"
 
+}
 
 ### Key bindings
 #

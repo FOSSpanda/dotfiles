@@ -11,7 +11,7 @@ if [ -f "/etc/arch-release" ]; then
     waybar pavucontrol cmake linux-headers gvfs polkit-gnome \
     thunar-archive-plugin thunar-volman unzip meson \
     xdg-user-dirs jq grim slurp sway-contrib wl-clipboard \
-    discord telegram-desktop
+    discord telegram-desktop ttf-nerd-fonts-symbols
 
 elif [ -f "/etc/debian_version" ]; then
   sudo dpkg --add-architecture i386
