@@ -16,7 +16,7 @@ set $term wezterm
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | wmenu | xargs swaymsg exec --
 set $menu fuzzel
-set $manager dolphin
+set $manager thunar
 
 ### Execute things
 exec autotiling --limit=2
