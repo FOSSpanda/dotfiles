@@ -18,6 +18,7 @@ set $term wezterm
 set $menu fuzzel
 set $manager thunar
 
+
 ### Execute things
 exec autotiling --limit=2
 exec sway-audio-idle-inhibit
