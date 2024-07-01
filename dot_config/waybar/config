@@ -9,8 +9,7 @@
     "modules-left": [
         "sway/workspaces",
         "sway/mode",
-        "sway/scratchpad"//,
-//        "custom/media"
+        "sway/scratchpad"
          ],
     "modules-center": [
         "sway/window"
