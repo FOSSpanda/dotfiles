@@ -8,4 +8,3 @@ alias ls="eza --icons"
 alias less=most
 alias imv=imv-wayland
 alias cd..="cd .."
-alias apt=nala
