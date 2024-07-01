@@ -28,7 +28,7 @@ elif [ -f "/etc/debian_version" ]; then
     thunar-archive-plugin thunar-volman thunar-gtkhash unzip \
     cmake meson xdg-user-dirs jq pamixer grim slurp \
     steam-installer steam-devices autotiling libfuse2 \
-    wl-clipboard
+    wl-clipboard wget
 
   wget "https://discord.com/api/download?platform=linux&format=deb" -O ~/Downloads/discord.deb
 
