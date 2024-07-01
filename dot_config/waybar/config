@@ -18,7 +18,7 @@
         "custom/sway-audio-idle-inhibit",
         "idle_inhibitor",
         "pulseaudio",
-        "network"
+        "network",
         "cpu",
         "memory",
         "temperature",
