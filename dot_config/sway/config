@@ -70,6 +70,14 @@ exec swayidle -w \
 
 bindsym $mod+L exec swaylock -f -c 000000
 
+
+    # wayland vesion
+    for_window [app_id="mpv"] inhibit_idle fullscreen
+    for_window [app_id="chromium-browser-chromium"] inhibit_idle fullscreen
+    for_window [app_id="firefox"] inhibit_idle fullscreen
+    for_window [app_id="firefox-esr"] inhibit_idle fullscreen
+    for_window [app_id="Kodi"] inhibit_idle fullscreen
+
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
