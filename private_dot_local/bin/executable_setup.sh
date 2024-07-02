@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "package install"
 read -p "Press key to continue.. " -n1 -s
 
