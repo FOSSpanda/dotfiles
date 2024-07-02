@@ -53,7 +53,7 @@ echo "rust"
 read -p "Press key to continue.. " -n1 -s
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-. .cargo/env #check for fish!
+. .cargo/env
 
 cargo install alacritty
 cargo install eza
