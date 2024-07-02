@@ -34,6 +34,10 @@ elif [ -f "/etc/debian_version" ]; then
 
   sudo apt install ./Downloads/discord.deb
 
+  wget "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/NerdFontsSymbolsOnly.tar.xz" -O ~/Downloads/NerdFontsSymbolsOnly.tar.xz
+  mkdir -p ~/.local/share/fonts/NerdFontSymbols
+  tar -xzf ~/Downloads/NerdFontsSymbolsOnly.tar.xz  -C ~/.local/share/fonts/NerdFontSymbols
+
 
   echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/3/Debian_12/ /' | sudo tee /etc/apt/sources.list.d/shells:fish:release:3.list
   curl -fsSL https://download.opensuse.org/repositories/shells:fish:release:3/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_fish_release_3.gpg > /dev/null
@@ -109,3 +113,5 @@ read -p "Press key to continue.. " -n1 -s
 curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin
 
 exit
+
+
