@@ -19,8 +19,9 @@ if [ -f "/etc/debian_version" ]; then
     steam-installer steam-devices autotiling libfuse2 \
     wl-clipboard wget
 
-  wget "https://discord.com/api/download?platform=linux&format=deb" -O ~/Downloads/discord.deb
 
+
+  wget "https://discord.com/api/download?platform=linux&format=deb" -O ~/Downloads/discord.deb
   sudo apt install ./Downloads/discord.deb
 
   wget "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/NerdFontsSymbolsOnly.tar.xz" -O ~/Downloads/NerdFontsSymbolsOnly.tar.xz
