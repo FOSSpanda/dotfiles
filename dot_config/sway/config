@@ -1,5 +1,17 @@
 # make sure dbus see's this
 exec --no-startup-id dbus-update-activation-environment --all
+exec systemctl --user set-environment XDG_CURRENT_DESKTOP=sway
+exec systemctl --user import-environment DISPLAY \
+                                         SWAYSOCK \
+                                         WAYLAND_DISPLAY \
+                                         XDG_CURRENT_DESKTOP
+
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY \
+                                                  SWAYSOCK \
+                                                  XDG_CURRENT_DESKTOP=sway \
+                                                  WAYLAND_DISPLAY
+
 
 ###Auto Starts
 exec --no-startup-id /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1
@@ -282,4 +294,136 @@ bar {
     for_window [app_id="firefox-esr"] inhibit_idle fullscreen
     for_window [app_id="Kodi"] inhibit_idle fullscreen
 
-include ~/.config/sway/config.d/*
+#include ~/.config/sway/config.d/*
+
+
+# Cycle through workspaces
+bindsym $mod+tab workspace next_on_output
+bindsym $mod+Shift+tab workspace prev_on_output
+
+
+# Media player controls
+bindsym --no-warn XF86AudioPlay exec playerctl play-pause
+bindsym --no-warn XF86AudioNext exec playerctl next
+bindsym --no-warn XF86AudioPrev exec playerctl previous
+# Screenshots
+## Area selection shortcuts
+set $selected_window swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp
+set $focused_window swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"'
+set $focused_output swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name'
+## Screenshot commands
+### Full
+set $screenshot_full grim
+set $screenshot_full_clipboard grim - | wl-copy
+### Selected window
+set $screenshot_selected_window $selected_window | grim -g-
+set $screenshot_selected_window_clipboard $selected_window | grim -g- - | wl-copy
+### Selected area
+set $screenshot_selected_area slurp | grim -g-
+set $screenshot_selected_area_clipboard slurp | grim -g- - | wl-copy
+### Focused window
+set $screenshot_focused_window $focused_window | grim -g-
+set $screenshot_focused_window_clipboard $focused_window | grim -g- - | wl-copy
+### Focused output
+set $screenshot_focused_output grim -o $($focused_output)
+set $screenshot_focused_output_clipboard grim -o $($focused_output) - | wl-copy
+
+## Screenshot mode menu
+set $screenshot "Screenshot: (f) full, (s) select window, (a) select area, (w) focused window, (o) focused output [Ctrl+ saves to clipboard]"
+mode $screenshot {
+    # Full
+    bindsym f exec $screenshot_full; mode "default"
+    bindsym Ctrl+f exec $screenshot_full_clipboard; mode "default"
+    # Selected window
+    bindsym s exec $screenshot_selected_window; mode "default"
+    bindsym Ctrl+s exec $screenshot_selected_window_clipboard; mode "default"
+    # Selected area
+    bindsym a exec $screenshot_selected_area; mode "default"
+    bindsym Ctrl+a exec $screenshot_selected_area_clipboard; mode "default"
+    # Focused window
+    bindsym w exec $screenshot_focused_window; mode "default"
+    bindsym Ctrl+w exec $screenshot_focused_window_clipboard; mode "default"
+    # Focused output
+    bindsym o exec $screenshot_focused_output; mode "default"
+    bindsym Ctrl+o exec $screenshot_focused_output_clipboard; mode "default"
+
+    # Exit screenshot mode menu
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+Print mode "default"
+}
+bindsym $mod+Print mode $screenshot
+
+# System mode menu
+set $mode_system "What to do? (l) lock, (e) logout, (r) reboot, (s) suspend, (Shift+s) shutdown"
+mode $mode_system {
+	bindsym l exec $screenlock; mode "default"
+	bindsym e exec swaymsg exit; mode "default"
+	bindsym r exec systemctl reboot; mode "default"
+	bindsym s exec systemctl suspend; mode "default"
+	bindsym Shift+s exec systemctl poweroff; mode "default"
+
+	# back to normal: Enter or Escape
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+unbindsym $mod+Shift+e
+bindsym $mod+Shift+e mode $mode_system
+
+
+exec_always {
+    systemctl --user import-environment
+    gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+    gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
+    gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+}
+
+# Wayland default floats
+for_window [app_id="(Calendar|Calculator|Power-statistics|Control-center)"] floating enable
+for_window [app_id="org.gnome.(Nautilus|Weather)"] floating enable
+for_window [app_id="nm-connection-editor"] floating enable
+for_window [app_id="(pavucontrol|psensor)"] floating enable
+for_window [app_id="evolution-alarm-notify"] floating enable
+for_window [app_id="nemo"] floating enable
+for_window [app_id="evolution" title="Compose Message"] floating enable
+for_window [app_id="evolution" title="Re(.*)"] floating enable
+for_window [app_id="evolution" title="Fwd(.*)"] floating enable
+for_window [app_id="mpv"] floating enable
+for_window [app_id="mpv"] resize set 960 540
+for_window [app_id="mpv"] border pixel 0
+for_window [app_id="firefox" title="Pushbullet"] floating enable
+for_window [app_id="firefox" title="Firefox — Sharing Indicator"] floating enable
+for_window [app_id="firefox" title="Picture-in-Picture"] floating enable
+for_window [app_id="firefox" title="Pushbullet – Mozilla Firefox"] floating enable
+for_window [app_id="firefox" title="About Mozilla Firefox"] floating enable
+
+# Brave, chrome, chromium
+for_window [title="Picture-in-picture"] floating enable
+
+    ## Floating Rules
+    # Thunar
+    for_window [app_id="thunar"] floating enable
+    # imv
+    for_window [app_id="imv"] floating enable
+    for_window [app_id="imv"] floating_maximum_size 1366 x 768
+    # xarchiver
+    for_window [app_id="engrampa"] floating enable
+    # pavucontrol
+    for_window [app_id="pavucontrol"] floating enable
+    # Bitwarden
+    for_window [class="Bitwarden"] floating enable
+    # mpv
+    for_window [app_id="mpv"] floating enable
+    for_window [app_id="mpv"] floating_maximum_size 1366 x 768 # this doesn't seem to work for freshly spawned windows
+    for_window [class="mpv"] floating enable
+    # xfce-polkit
+    for_window [app_id="xfce-polkit"] floating enable
+    # make vorta float, but I guess it calls itself python3???
+    for_window [app_id="python3"] floating enable
+    # kdeconnect
+    for_window [app_id="org.kde.kdeconnect.daemon"] floating enable
+    # ario, my preferred mpd client though I wish there was a better one still, this one comes closest.
+    for_window [app_id="ario"] floating enable
+    # battle.net needs to float otherwise the client doesn't accept clicks
+    for_window [class="battle.net.exe"] floating enable 
