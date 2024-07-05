@@ -2,13 +2,16 @@
 echo "package install"
 read -p "Press key to continue.. " -n1 -s
 
-if [ -f "/etc/debian_version" ]; then
+if [ ! -f "/etc/debian_version" ]; then
+  exit "Only setup for debian!" 1;
+fi
+
   sudo dpkg --add-architecture i386
 
   sudo apt update
 
   sudo apt install \
-    stow sway swayidle swaylock mako-notifier bat most less micro \
+    sway swayidle swaylock mako-notifier bat most less micro \
     git fuzzel fzf thunar curl hyfetch flatpak pkg-config \
     xdg-desktop-portal-wlr xdg-desktop-portal-gtk fonts-font-awesome  \
     xwayland firefox fonts-noto fonts-noto-color-emoji \
@@ -17,32 +20,30 @@ if [ -f "/etc/debian_version" ]; then
     thunar-archive-plugin thunar-volman thunar-gtkhash unzip \
     cmake meson xdg-user-dirs jq pamixer grim slurp \
     steam-installer steam-devices autotiling libfuse2 \
-    wl-clipboard wget
+    wl-clipboard wget mutt-wizard neomutt bpytop
 
-
-
+#Discord
   wget "https://discord.com/api/download?platform=linux&format=deb" -O ~/Downloads/discord.deb
   sudo apt install ./Downloads/discord.deb
 
+#NerdFonts - Symbols Only
   wget "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/NerdFontsSymbolsOnly.tar.xz" -O ~/Downloads/NerdFontsSymbolsOnly.tar.xz
   mkdir -p ~/.local/share/fonts/NerdFontSymbols
   tar -xzf ~/Downloads/NerdFontsSymbolsOnly.tar.xz  -C ~/.local/share/fonts/NerdFontSymbols
 
-
+#Fish shell
   echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/3/Debian_12/ /' | sudo tee /etc/apt/sources.list.d/shells:fish:release:3.list
   curl -fsSL https://download.opensuse.org/repositories/shells:fish:release:3/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_fish_release_3.gpg > /dev/null
   sudo apt update
   sudo apt install fish
 
+#WezTerm
   curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
   echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
   sudo apt update
   sudo apt install wezterm
 
 
-else
-  exit "Only setup for debian!" 1;
-fi
 
 echo "flatpak time"
 read -p "Press key to continue.. " -n1 -s
