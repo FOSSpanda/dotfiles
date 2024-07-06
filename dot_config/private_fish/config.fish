@@ -3,6 +3,8 @@ if status is-interactive
     hyfetch
     oh-my-posh init fish --config ~/.config/ohmyposh/tdp.toml | source
     abbr --add ls eza --icons
+    abbr --add cze chezmoi edit
+    abbr --add cza chezmoi apply
     set -gx EDITOR nvim
     # Commands to run in interactive sessions can go here
 end
