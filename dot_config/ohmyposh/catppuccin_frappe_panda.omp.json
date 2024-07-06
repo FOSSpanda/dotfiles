@@ -18,7 +18,7 @@
         {
           "foreground": "p:pink",
           "style": "plain",
-          "background": "p:red"
+          "background": "p:red",
           "template": "🐼 ",
           "type": "text"
         },
