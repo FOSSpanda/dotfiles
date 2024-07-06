@@ -3,10 +3,15 @@
   "palette": {
         "os": "#ACB0BE",
         "closer": "p:os",
+        "rosewater": "#f2d5cf",
+        "flamingo": "#eebebe",
         "pink": "#F4B8E4",
+        "mauve": "#ca9ee6",
+        "red": "#e78284",
         "lavender": "#BABBF1",
-        "blue":  "#8CAAEE"
-  },
+        "blue":  "#8CAAEE",
+        
+    },
   "blocks": [
     {
       "alignment": "left",
@@ -14,6 +19,7 @@
         {
           "foreground": "p:pink",
           "style": "plain",
+          "background": "p:red"
           "template": "🐼 ",
           "type": "text"
         },
