@@ -6,5 +6,5 @@ if status is-interactive
     abbr --add ls eza --icons
     abbr --add cze chezmoi edit
     abbr --add cza chezmoi apply
-    set -gx EDITOR nvim
+    set -gx EDITOR micro
 end
