@@ -7,4 +7,5 @@ if status is-interactive
     abbr --add cze chezmoi edit
     abbr --add cza chezmoi apply
     set -gx EDITOR micro
+    set -g fish_greeting
 end
