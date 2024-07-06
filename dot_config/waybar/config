@@ -7,7 +7,6 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "custom/sway-audio-idle-inhibit",
         "sway/workspaces",
         "sway/mode",
         "sway/scratchpad"
@@ -16,6 +15,7 @@
         "sway/window"
     ],
     "modules-right": [
+        "custom/audio_idle_inhibitor"
         "idle_inhibitor",
         "pulseaudio",
         "network",
@@ -61,9 +61,9 @@
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "timezone": "Europe/London",
+        //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%Y-%m-%d@:%H:%M}"
     },
     "cpu": {
         "format": "{usage}% ",
