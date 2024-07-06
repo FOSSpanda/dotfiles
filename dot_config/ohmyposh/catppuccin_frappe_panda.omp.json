@@ -19,7 +19,7 @@
           "foreground": "p:pink",
           "style": "plain",
           "background": "p:red",
-          "template": "🐼 ",
+          "template": "🐼",
           "type": "text"
         },
         {
