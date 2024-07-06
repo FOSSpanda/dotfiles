@@ -14,6 +14,11 @@
         {
           "foreground": "p:os",
           "style": "plain",
+          "template": "🐼 "
+        },
+        {
+          "foreground": "p:os",
+          "style": "plain",
           "template": "{{.Icon}} ",
           "type": "os"
         },
