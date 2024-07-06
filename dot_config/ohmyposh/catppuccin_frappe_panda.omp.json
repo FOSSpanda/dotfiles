@@ -65,8 +65,7 @@
           "type": "text"
         }
       ],
-      "type": "text",
-      "template": "\n〉"      
+      "type": "prompt"
     }
   ],
  "transient_prompt": {
