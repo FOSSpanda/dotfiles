@@ -27,4 +27,4 @@ export EDITOR=nano
 hyfetch
 
 eval "$(zoxide init bash)"
-eval "$(oh-my-posh init bash --config ~/.config/ohmyposh/catppuccin_frappe_panda.omp.json)"
+eval "$(oh-my-posh init bash --config ~/.config/ohmyposh/tdp.toml)"
