@@ -15,6 +15,7 @@
           "foreground": "p:os",
           "style": "plain",
           "template": "🐼 "
+          "type": "text"
         },
         {
           "foreground": "p:os",
