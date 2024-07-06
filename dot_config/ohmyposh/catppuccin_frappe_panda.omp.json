@@ -65,7 +65,7 @@
           "type": "text"
         }
       ],
-      "type": "text"
+      "type": "text",
       "template": "〉"      
     }
   ],
