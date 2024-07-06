@@ -15,6 +15,6 @@ if status is-interactive
 # Commands to run in interactive sessions can go here
     fish_add_path -g -p ~/.local/bin ~/.cargo/bin
     hyfetch
-    oh-my-posh init fish --config ~/.config/ohmyposh/tdp.toml | source
+    oh-my-posh init fish --config ~/.config/ohmyposh/catppuccin_frappe_panda.omp.json | source
 
 end
