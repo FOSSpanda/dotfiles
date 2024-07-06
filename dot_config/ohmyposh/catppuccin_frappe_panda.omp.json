@@ -66,6 +66,7 @@
         }
       ],
       "type": "text",
+      "newline": "true",
       "template": "〉"      
     }
   ],
