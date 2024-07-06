@@ -10,10 +10,10 @@
         "sway/workspaces",
         "sway/mode",
         "sway/scratchpad"
-         ],
-    "modules-center": [
-        // sway/window"
     ],
+//    "modules-center": [
+//        // sway/window"
+//    ],
     "modules-right": [
         "custom/audio_idle_inhibitor",
         "idle_inhibitor",
