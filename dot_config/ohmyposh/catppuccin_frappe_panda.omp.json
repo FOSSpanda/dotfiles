@@ -18,7 +18,7 @@
         {
           "foreground": "p:pink",
           "style": "plain",
-          "background": "p:red",
+          "background": "{{ if .Root}} p:red {{else}} transparent",
           "template": "🐼",
           "type": "text"
         },
