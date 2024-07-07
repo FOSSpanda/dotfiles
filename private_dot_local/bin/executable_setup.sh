@@ -2,9 +2,27 @@
 echo "package install"
 read -p "Press key to continue.. " -n1 -s
 
-if [ ! -f "/etc/debian_version" ]; then
-  exit "Only setup for debian!" 1;
-fi
+if [ -f "/etc/arch-release" ]; then
+  sudo pacman -Syu
+  sudo pacman -Sy --needed \
+    sway swaylock mako bat most less micro \
+    git fuzzel fzf thunar curl hyfetch flatpak pkg-config \
+    xorg-xwayland firefox xdg-desktop-portal-wlr \
+    xdg-desktop-portal-gtk noto-fonts noto-fonts-emoji \
+    waybar pavucontrol cmake linux-headers gvfs polkit-gnome \
+    thunar-archive-plugin thunar-volman unzip meson \
+    xdg-user-dirs jq grim slurp sway-contrib wl-clipboard \
+    discord telegram-desktop ttf-nerd-fonts-symbols \
+    neovim code fish wezterm vorta plasma-meta \
+    kde-applications-meta sddm sddm-kcm base-devel \
+    git
+
+  git clone https://aur.archlinux.org/paru.git
+  cd paru
+  makepkg -si
+  paru --gendb
+
+elif [ ! -f "/etc/debian_version" ]; then
 
   sudo dpkg --add-architecture i386
 
@@ -21,7 +39,7 @@ fi
     cmake meson xdg-user-dirs jq pamixer grim slurp \
     steam-installer steam-devices autotiling libfuse2 \
     wl-clipboard wget mutt-wizard neomutt bpytop \
-    neovim python3-neovim
+    neovim python3-neovim 
 
 #Discord
   wget "https://discord.com/api/download?platform=linux&format=deb" -O ~/Downloads/discord.deb
@@ -44,14 +62,20 @@ fi
   sudo apt update
   sudo apt install wezterm
 
+else
+  exit "Only setup for debian, and arch!" 1;
+fi
 
 
 echo "flatpak time"
 read -p "Press key to continue.. " -n1 -s
 
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install com.borgbase.Vorta
-flatpak install org.telegram.desktop
+
+if [ -f "/etc/debian-version" ]; then
+  flatpak install com.borgbase.Vorta
+  flatpak install org.telegram.desktop
+fi
 
 echo "rust"
 read -p "Press key to continue.. " -n1 -s
