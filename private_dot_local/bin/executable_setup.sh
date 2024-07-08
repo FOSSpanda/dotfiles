@@ -1,28 +1,7 @@
 #!/bin/bash
 echo "package install"
 read -p "Press key to continue.. " -n1 -s
-
-if [ -f "/etc/arch-release" ]; then
-  sudo pacman -Syu
-  sudo pacman -Sy --needed \
-    sway swaylock mako bat most less micro \
-    git fuzzel fzf thunar curl hyfetch flatpak pkg-config \
-    xorg-xwayland firefox xdg-desktop-portal-wlr \
-    xdg-desktop-portal-gtk noto-fonts noto-fonts-emoji \
-    waybar pavucontrol cmake linux-headers gvfs polkit-gnome \
-    thunar-archive-plugin thunar-volman unzip meson \
-    xdg-user-dirs jq grim slurp sway-contrib wl-clipboard \
-    discord telegram-desktop ttf-nerd-fonts-symbols \
-    neovim code fish wezterm vorta plasma-meta \
-    kde-applications-meta sddm sddm-kcm base-devel \
-    git
-
-  git clone https://aur.archlinux.org/paru.git
-  cd paru
-  makepkg -si
-  paru --gendb
-
-elif [ ! -f "/etc/debian_version" ]; then
+if [  -f "/etc/debian_version" ]; then
 
   sudo dpkg --add-architecture i386
 
@@ -48,7 +27,7 @@ elif [ ! -f "/etc/debian_version" ]; then
 #NerdFonts - Symbols Only
   wget "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/NerdFontsSymbolsOnly.tar.xz" -O ~/Downloads/NerdFontsSymbolsOnly.tar.xz
   mkdir -p ~/.local/share/fonts/NerdFontSymbols
-  tar -xzf ~/Downloads/NerdFontsSymbolsOnly.tar.xz  -C ~/.local/share/fonts/NerdFontSymbols
+  tar -xf ~/Downloads/NerdFontsSymbolsOnly.tar.xz  -C ~/.local/share/fonts/NerdFontSymbols
 
 #Fish shell
   echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/3/Debian_12/ /' | sudo tee /etc/apt/sources.list.d/shells:fish:release:3.list
@@ -63,7 +42,7 @@ elif [ ! -f "/etc/debian_version" ]; then
   sudo apt install wezterm
 
 else
-  exit "Only setup for debian, and arch!" 1;
+  exit "Only setup for debian!" 1;
 fi
 
 
