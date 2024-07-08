@@ -1,6 +1,7 @@
 if status is-interactive
 # Abbreviations
-    abbr --add ls eza --icons
+    abbr --add l eza --icons
+    abbr --add ls eza -al --color=always --header --icons --group-directories-first 
     abbr --add cze chezmoi edit
     abbr --add cza chezmoi apply
     abbr --add bat batcat
