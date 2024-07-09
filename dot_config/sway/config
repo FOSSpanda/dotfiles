@@ -58,7 +58,7 @@ output $mon3 resolution 1920x1200@59.950Hz position 2560 1680
 
 
 
-gaps inner 4
+gaps inner 10
 gaps outer 4
 smart_gaps on
 default_border none
