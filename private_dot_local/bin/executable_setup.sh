@@ -42,6 +42,15 @@ if [  -f "/etc/debian_version" ]; then
   sudo apt update
   sudo apt install wezterm
 
+#Sway Audio Inhibit
+  cd ~/Downloads/git
+  git clone git@github.com:ErikReider/SwayAudioIdleInhibit.git
+  cd SwayAudioIdleInhibitSwayAudioIdleInhibit
+  meson build
+  ninja -C build
+  sudo meson install -C build
+  cd ~
+
 else
   exit "Only setup for debian!" 1;
 fi
