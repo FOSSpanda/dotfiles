@@ -59,7 +59,7 @@ output $mon3 resolution 1920x1200@59.950Hz position 2560 1680
 
 
 gaps inner 10
-gaps outer 4
+gaps outer 10
 smart_gaps on
 default_border none
 default_floating_border pixel 2
