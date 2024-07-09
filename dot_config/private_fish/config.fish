@@ -12,7 +12,7 @@ if status is-interactive
 # Set some global variables
     set -gx EDITOR micro
     set -g fish_greeting
-
+    set -gx MICRO_TRUECOLOR 1
 # Commands to run in interactive sessions can go here
     fish_add_path -g -p ~/.local/bin ~/.cargo/bin
     hyfetch
