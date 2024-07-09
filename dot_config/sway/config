@@ -39,7 +39,9 @@ exec sway-audio-idle-inhibit
 ### Output configuration
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /home/adp/Pictures/design-texture-rainbow-background-illustration.jpeg fill
+
 #
 # Example configuration:
 #
@@ -54,7 +56,6 @@ output $mon1 resolution 2560x2880@59.982Hz position 0 0
 output $mon2 resolution 1920x1200@59.950Hz position 2560 480 bg #000000 solid_color 
 output $mon3 resolution 1920x1200@59.950Hz position 2560 1680
 
-output $mon3 bg /home/adp/Pictures/design-texture-rainbow-background-illustration.jpeg fill
 
 
 gaps inner 4
