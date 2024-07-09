@@ -1,5 +1,5 @@
 [font]
-size = 12.0
+size = 14.0
 
 [font.bold]
 family = "monospace"
@@ -20,3 +20,6 @@ style = "Regular"
 [shell]
 program = "/usr/bin/fish"
 args = ["-i"]
+
+[window]
+opacity = 0.9
