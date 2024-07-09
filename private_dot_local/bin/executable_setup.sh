@@ -19,7 +19,7 @@ if [  -f "/etc/debian_version" ]; then
     steam-installer steam-devices autotiling libfuse2 \
     wl-clipboard wget mutt-wizard neomutt bpytop \
     neovim python3-neovim zram-tools wayland-protocols \
-    libwayland-dev libpulse-dev
+    libwayland-dev libpulse-dev rsync
 
 #Discord
   wget "https://discord.com/api/download?platform=linux&format=deb" -O ~/Downloads/discord.deb
