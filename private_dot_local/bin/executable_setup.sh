@@ -18,7 +18,8 @@ if [  -f "/etc/debian_version" ]; then
     cmake meson xdg-user-dirs jq pamixer grim slurp \
     steam-installer steam-devices autotiling libfuse2 \
     wl-clipboard wget mutt-wizard neomutt bpytop \
-    neovim python3-neovim zram-tools
+    neovim python3-neovim zram-tools wayland-protocols \
+    libwayland-dev libpulse-dev
 
 #Discord
   wget "https://discord.com/api/download?platform=linux&format=deb" -O ~/Downloads/discord.deb
