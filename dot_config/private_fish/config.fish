@@ -10,7 +10,7 @@ if status is-interactive
     abbr --add cd.. "cd .."
 
 # Set some global variables
-    set -gx EDITOR nvim
+    set -gx EDITOR micro 
     set -g fish_greeting
     set -gx MICRO_TRUECOLOR 1
 # Commands to run in interactive sessions can go here
