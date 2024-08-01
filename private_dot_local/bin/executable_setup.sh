@@ -19,7 +19,8 @@ if [  -f "/etc/debian_version" ]; then
     steam-installer steam-devices autotiling libfuse2 \
     wl-clipboard wget mutt-wizard neomutt bpytop \
     neovim python3-neovim zram-tools wayland-protocols \
-    libwayland-dev libpulse-dev rsync vlc gettext
+    libwayland-dev libpulse-dev rsync vlc gettext \
+    libdbus-1-dev bluez
 
 #Discord
   wget "https://discord.com/api/download?platform=linux&format=deb" -O ~/Downloads/discord.deb
@@ -81,7 +82,7 @@ cargo install alacritty
 cargo install eza
 cargo install zoxide
 cargo install vivid
-
+cargo install bluetui
 
 echo "oh my posh"
 read -p "Press key to continue.. " -n1 -s

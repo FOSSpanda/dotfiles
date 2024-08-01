@@ -14,8 +14,8 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 
 
 ###Auto Starts
-#exec --no-startup-id /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1
-exec /usr/libexec/polkit-gnome-authentication-agent-1exec /usr/libexec/polkit-gnome-authentication-agent-1
+exec --no-startup-id /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1
+#exec /usr/libexec/polkit-gnome-authentication-agent-1exec /usr/libexec/polkit-gnome-authentication-agent-1
 #xwayland enable
 
 ### Variables
@@ -23,7 +23,9 @@ exec /usr/libexec/polkit-gnome-authentication-agent-1exec /usr/libexec/polkit-gn
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Your preferred terminal emulator
-set $term alacritty 
+set $term wezterm
+#set $term kitty
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -31,6 +33,7 @@ set $term alacritty
 set $menu fuzzel
 set $manager thunar
 
+font pango:Comic Code Ligatures 14
 
 ### Execute things
 exec autotiling --limit=2
@@ -38,9 +41,6 @@ exec sway-audio-idle-inhibit
 
 ### Output configuration
 
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /home/adp/Pictures/design-texture-rainbow-background-illustration.jpeg fill
 
 #
 # Example configuration:
@@ -52,10 +52,13 @@ set $mon1 'LG Electronics LG SDQHD 306NTZND5669'
 set $mon2 'Dell Inc. DELL U2412M 0FFXD3CF1LDS'
 set $mon3 'Dell Inc. DELL U2415 XKV0P01G1HKU'
 
-output $mon1 resolution 2560x2880@59.982Hz position 0 0
-output $mon2 resolution 1920x1200@59.950Hz position 2560 480 bg #000000 solid_color 
+output $mon1 resolution 2560x2880@59.982Hz position 0 0 
+output $mon2 resolution 1920x1200@59.950Hz position 2560 480  
 output $mon3 resolution 1920x1200@59.950Hz position 2560 1680
 
+output $mon1 bg ~/Pictures/Backgrounds/vertical/pexels-uraw-13202977.jpg fill
+output $mon2 bg ~/Pictures/Backgrounds/hexagon-wallpaper-shaped-background-surface.jpg fill
+output $mon3 bg ~/Pictures/Backgrounds/hexagon-wallpaper-shaped-background-surface.jpg fill
 
 
 gaps inner 10
