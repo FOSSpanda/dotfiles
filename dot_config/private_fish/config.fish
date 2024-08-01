@@ -13,7 +13,7 @@ if status is-interactive
     set -g fish_greeting
     set -gx MICRO_TRUECOLOR 1
 # Commands to run in interactive sessions can go here
-    fish_add_path -g -p ~/.local/bin ~/.cargo/bin /usr/local/go/bin
+    fish_add_path -g -p ~/.local/bin ~/.cargo/bin /usr/local/go/bin ~/.spicetify/
     hyfetch
     oh-my-posh init fish --config ~/.config/ohmyposh/catppuccin_frappe_panda.omp.json | source
 
