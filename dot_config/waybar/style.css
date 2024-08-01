@@ -1,3 +1,4 @@
+@import "latte.css";
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: FontAwesome, ComicCodeLigatures, monospace, Roboto, Helvetica, Arial, sans-serif;
@@ -5,7 +6,7 @@
 }
 
 window#waybar {
-  background-color: rgb(43, 48, 59);
+  background-color: @crust;
   border-bottom: 3px solid rgba(100, 114, 125, 0.5);
   color: #ffffff;
   transition-property: background-color;
