@@ -20,7 +20,7 @@ if [  -f "/etc/debian_version" ]; then
     wl-clipboard wget mutt-wizard neomutt bpytop \
     neovim python3-neovim zram-tools wayland-protocols \
     libwayland-dev libpulse-dev rsync vlc gettext \
-    libdbus-1-dev bluez
+    libdbus-1-dev bluez speech-dispatcher
 
 #Discord
   wget "https://discord.com/api/download?platform=linux&format=deb" -O ~/Downloads/discord.deb
