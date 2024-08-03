@@ -122,6 +122,15 @@ input "9456:8266:Metadot_-_Das_Keyboard_Das_Keyboard_4" {
     xkb_numlock enabled
     xkb_options "compose:rctrl,compose:caps"
 }
+
+input "9456:8353:Das_Keyboard_Das_Keyboard_6_Pro_Keyboard" {
+    xkb_layout gb
+    xkb_model pc105
+    xkb_variant extd
+    xkb_numlock enabled
+    xkb_options "compose:rctrl,compose:caps"
+}
+
 input "6134:2085:Unicomp_Inc_Ruffian6_0_Kbrd_PC_5250__v3_50" {
     xkb_layout gb
     xkb_model pc105
